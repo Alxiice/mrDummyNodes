@@ -1,6 +1,6 @@
 
 __version__ = "1.0"
-__author__ = "author_1"
+__author__ = "moduleauthor"
 __license__ = "MIT"
 
 import os
@@ -16,11 +16,15 @@ class TestCLNode(desc.CommandLineNode):
     category = 'TestPlugin'
     commandLine = 'python ' + exe_path + " int={intParamValue} float={floatParamValue} string={stringParamValue} bool={boolParamValue} file={fileValue}"
     
-    documentation = DOC
-    
-    __nodeInfo__ = [
-        ("model link", "https://huggingface.co/alicevision/great-model")
-    ]
+    documentation = """# TestCLNode
+## Node info
+here are info on the node
+
+## How to use it
+Here are more info
+1. First step
+2. Second step
+"""
 
     inputs = [
         desc.IntParam(
@@ -67,49 +71,23 @@ class TestCLNode(desc.CommandLineNode):
 
 
 class TestCLNode2(desc.CommandLineNode):
-    """# TestCLNode2
+    """# TestCLNode
 
-Lorem markdownum saepe labitur eadem colubriferi genitor sermonibus insignia,
-distulit positum veri: sed per. Huius Troica durisque saxoque refert patera ab
-herbosas, et Titan secunda comitante praecipitatur *nullosque pennis*, relinquit
-perfide.
+## Node info
+here are info on the node
 
-    bot -= thickAnalogLock - 1 * systemBounceCpa(cpm_risc_device + icsKerning);
-    if (63) {
-        storageAlu.cpuDonglePostscript = terahertz_rdf;
-    } else {
-        metal_and(adwareInput.cookie_media(loadMashupDesign, mtuSpool),
-                mms_matrix.memory(megapixelNatAddress, -2, -2));
-    }
-
-## Aede aequora sudataque patriisque fretum regisque
-
-Feliciter longo Lelegas colentes [porrexerat](http://etacta.com/occidithoc.html)
-grave [cape](http://www.feraantrum.net/). Alta solem clipeum interdum? Dextra
-nec melius, **et dabitis** confugit lacriment gurgite hunc clarum spatiumque. 
-
-> Quae altum caesa furores priori oculi, totaque pete, in Pallas cur pectora
-> corpora nocte admisso. Quicquid confundas et Austri castumque urguere hausit
-> erat **auras ipse** nulla: quos ruptis: in.
-
-## Colorem et credat prius caput processisse
-
-Nec agros animas nascentur, undis mollia **ardor canes** te et paravi, Iason
-tauri! O gaudebat sororis texta. Nec senilis mihi certe pactaeque illis innuba
-inplevit pependit annis inferiaeque *ferunt ruit* iugalia, est. Cacumine mea
-valuit ne Phoebus quae, spem armis quoque.
-
-1. Et talaribus et pectora Aiaci
-2. Est lupos sit supinis
-3. Flectentem vigoris longo interdictae radium matrem aquis
-
-Nam vultus reverentia autem turis; terrore iudice et magni! Matrem equos
-corpora, est lenimen undas Alemone voces post vigebat cedit et inquiri.
-    """
+## How to use it
+Here are more info
+1. First step
+2. Second step
+"""
 
     category = 'TestPlugin'
-    author = "author_2"
+    author = "Alice"
     version = "2.0.0"
+    __nodeInfo__ = [
+        ("model link", "https://huggingface.co/alicevision/great-model")
+    ]
     
     
     commandLine = 'python ' + exe_path + " input={inputValue} output={outputValue}"

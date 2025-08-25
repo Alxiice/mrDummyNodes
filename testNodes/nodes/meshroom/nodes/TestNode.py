@@ -1,12 +1,24 @@
 
 __version__ = "1.0"
 
-import os
-
 from meshroom.core import desc
-            
+
+AAA = 2
+
+def print_info(chunk):
+    # chunk.logger.debug  (f"Message with debug   level ({chunk.logger})")
+    # chunk.logger.info   (f"Message with info    level ({chunk.logger})")
+    # chunk.logger.warning(f"Message with warning level ({chunk.logger})")
+    # chunk.logger.error  (f"Message with error   level ({chunk.logger})")
+    pass
+
 
 class TestNode(desc.Node):
+    
+    import time
+    print("load TestNode")
+    time.sleep(5) 
+    print("-> TestNode loaded")
 
     category = 'TestPlugin'
     documentation = """Doc of the node TestNode"""
@@ -19,6 +31,12 @@ class TestNode(desc.Node):
             label='sfmData',
             description='',
             value='',
+        ),
+        desc.IntParam(
+            name='input',
+            label='Input',
+            description='',
+            value=1,
         ),
         desc.ChoiceParam(
             name='verboseLevel',
@@ -41,7 +59,9 @@ class TestNode(desc.Node):
     ]
 
     def processChunk(self, chunk):
-        chunk.logManager.start(chunk.node.verboseLevel.value)
-        # chunk.logger.info("")
+        # chunk.logManager.start(chunk.node.verboseLevel.value)
         
-        chunk.logManager.end()
+        print(AAA)
+        print(1)
+        
+        # chunk.logManager.end()
